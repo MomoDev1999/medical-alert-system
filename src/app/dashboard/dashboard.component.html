@@ -1,0 +1,57 @@
+<body>
+  <div class="sidebar">
+    <div class="logo">
+      <i class="bi bi-heart-pulse-fill"></i> Sistema Médico
+    </div>
+    <ul>
+      <li class="mx-2">
+        <a href="#"><i class="bi bi-house-door"></i> Inicio</a>
+      </li>
+      <li class="mx-2">
+        <a href="#"><i class="bi bi-person-badge"></i> Pacientes</a>
+      </li>
+      <li class="mx-2">
+        <a href="#"><i class="bi bi-bell"></i> Alertas</a>
+      </li>
+      <li class="mx-2">
+        <a href="#"><i class="bi bi-graph-up"></i> Estadísticas</a>
+      </li>
+      <li class="mx-2">
+        <a href="#"><i class="bi bi-gear"></i> Configuración</a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="main-content">
+    <div class="header">
+      <h1>Bienvenido, Admin</h1>
+      <a href="#" class="btn">Añadir Alerta</a>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Alertas Activas</h3>
+        <p>10 pacientes en estado crítico</p>
+      </div>
+
+      <div class="card">
+        <h3>Consultas Programadas</h3>
+        <p>15 consultas para hoy</p>
+      </div>
+
+      <div class="card">
+        <h3>Disponibilidad de Camas</h3>
+        <p>5 camas disponibles</p>
+      </div>
+    </div>
+
+    <div class="chart">Gráfico en construcción</div>
+  </div>
+
+  <div *ngIf="data">
+    <h2>Vital Signs</h2>
+    <ul>
+      <li *ngFor="let item of data">{{ item }}</li>
+    </ul>
+  </div>
+</body>
